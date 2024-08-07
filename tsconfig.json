@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES6",
-    "module": "commonjs",
+    "target": "es2016",
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "outDir": "./dist",
     "rootDir": "./src",
@@ -14,12 +16,15 @@
     "removeComments": true,
     "sourceMap": true,
     "paths": {
+      "@config/*": ["config/*"],
       "@middlewares/*": ["middlewares/*"],
       "@models/*": ["models/*"],
       "@types": ["types"],
       "@types/*": ["types/*"],
       "@controllers/*": ["controllers/*"],
-      "@services/*": ["services/*"]
+      "@services/*": ["services/*"],
+      "@routes/*": ["routes/*"],
+      "@validations/*": ["validations/*"]
     }
   },
   "include": ["src/**/*"],
