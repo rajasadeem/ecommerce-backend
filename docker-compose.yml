@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: ecommerce
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    environment:
+      TYPEORM_CONNECTION: postgres
+      TYPEORM_HOST: db
+      TYPEORM_USERNAME: postgres
+      TYPEORM_PASSWORD: admin
+      TYPEORM_DATABASE: ecommerce
+      TYPEORM_PORT: 5432
+      TYPEORM_SYNCHRONIZE: true
+      TYPEORM_LOGGING: true
+
+volumes:
+  pgdata:

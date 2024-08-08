@@ -1,5 +1,5 @@
 import morgan from 'morgan';
-import logger from './logger'; // Make sure this is the correct path to your logger
+import logger from './logger';
 
 /**
  * Define a stream object with a 'write' function that will be used by Morgan
