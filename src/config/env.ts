@@ -11,6 +11,8 @@ const envSchema = Joi.object({
   DB_PORT: Joi.number().port().required(),
   DB_USERNAME: Joi.string().required(),
   DB_PASSWORD: Joi.string().required(),
+  DB_SYNC: Joi.boolean().required(),
+  DB_LOGGING: Joi.boolean().required(),
 })
   .unknown()
   .required();
@@ -31,6 +33,8 @@ const config = {
     PORT: envVars.DB_PORT,
     USERNAME: envVars.DB_USERNAME,
     PASSWORD: envVars.DB_PASSWORD,
+    SYNC: envVars.DB_SYNC,
+    LOGGING: envVars.DB_LOGGING,
   },
 };
 
