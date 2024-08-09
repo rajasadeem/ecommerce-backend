@@ -14,11 +14,9 @@ const errorHandler: ErrorRequestHandler = (
     message = 'Internal server error';
   }
 
-  res.locals.errorMessage = err.message;
-
   logger.error(err);
 
-  res.status(status).json({ status, message });
+  return res.status(status).json({ message });
 };
 
 export default errorHandler;

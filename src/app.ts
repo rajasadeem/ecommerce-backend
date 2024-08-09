@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morganMiddleware from '@config/morgan';
-import errorHandler from '@middlewares/error';
+import errorHandler from '@middlewares/ErrorHandler';
 
 const app = express();
 
