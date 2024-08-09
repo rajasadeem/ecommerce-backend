@@ -11,7 +11,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write",
     "prepare": "husky",
-    "migration:create": "cd src/migrations && npx typeorm-ts-node-commonjs migration:create",
+    "migration:create": "npx typeorm-ts-node-commonjs migration:create",
     "migrate:up": "npx typeorm-ts-node-commonjs migration:run -d src/data-source.ts",
     "migrate:down": "npx typeorm-ts-node-commonjs migration:revert -d src/data-source.ts"
   },

@@ -13,7 +13,7 @@ const AppDataSource = new DataSource({
   synchronize: true,
   logging: true,
   entities: [__dirname + '/models/*.{ts,js}'],
-  migrations: [__dirname + '/migrations/*.{ts,js}'],
+  migrations: [__dirname + '/../migrations/*.{ts,js}'],
   subscribers: [],
 });
 
