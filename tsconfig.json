@@ -24,7 +24,8 @@
       "@controllers/*": ["controllers/*"],
       "@services/*": ["services/*"],
       "@routes/*": ["routes/*"],
-      "@validations/*": ["validations/*"]
+      "@validations/*": ["validations/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": ["src/**/*"],
